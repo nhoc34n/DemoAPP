@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F5F9">
+
+    <!-- Top Header Bar -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#00B341"
+        android:padding="16dp">
+
+        <!-- Back Button -->
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="12dp"
+            android:src="@drawable/back"
+            app:tint="#FFFFFF"
+            android:layout_gravity="center_vertical"
+            android:onClick="onBackPressed"
+            android:contentDescription="Back" />
+
+
+        <!-- Title Text -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Payment"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- Amount to Pay Section -->
+    <LinearLayout
+        android:id="@+id/amountSection"
+        android:layout_below="@id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="top">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount to Pay"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#00B341"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Payment Methods Section -->
+    <LinearLayout
+        android:layout_below="@id/amountSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#FFFFFF">
+
+        <!-- Wallet Option -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="#E7F6E9">
+
+            <ImageView
+                android:id="@+id/walletIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/bkash" />
+
+            <TextView
+                android:layout_toEndOf="@id/walletIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bkash"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_marginStart="8dp" />
+
+            <RadioButton
+                android:id="@+id/bkashRadioButton"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <!-- PayPal Option -->
+
+
+        <!-- Stripe Option -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="#FFFFFF">
+
+            <ImageView
+                android:id="@+id/stripeIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/loan" />
+
+            <TextView
+                android:layout_toEndOf="@id/stripeIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nagad"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_marginStart="8dp" />
+
+            <RadioButton
+                android:id="@+id/nagadRadioButton"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <!-- Cash on Delivery Option -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="#FFFFFF">
+
+            <ImageView
+                android:id="@+id/cashIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/cash" />
+
+            <TextView
+                android:layout_toEndOf="@id/cashIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cash On Delivery"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:layout_marginStart="8dp" />
+
+            <RadioButton
+                android:id="@+id/codRadioButton"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- Bottom Continue Button -->
+    <Button
+        android:id="@+id/continueButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#00B341"
+        android:padding="12dp"
+        android:text="Continue"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+
+</RelativeLayout>
+
+

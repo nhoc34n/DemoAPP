@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#FFFFFF"
+    android:elevation="4dp"
+    android:padding="16dp"
+    android:layout_margin="8dp"
+    android:gravity="center_vertical"
+    android:layout_gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/productImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_placeholder"
+        android:scaleType="centerCrop"
+        android:layout_marginEnd="16dp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Product Name"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:fontFamily="@font/baloo" />
+
+        <TextView
+            android:id="@+id/productQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantity: 20 Quintal"
+            android:textSize="12sp"
+            android:textColor="#6D6D6D" />
+
+        <TextView
+            android:id="@+id/productRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rate: $280 / Quintal"
+            android:textSize="12sp"
+            android:textColor="#6D6D6D" />
+
+        <TextView
+            android:id="@+id/sellerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="George Anderson, Texas, USA"
+            android:textSize="12sp"
+            android:textColor="#6D6D6D" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/callButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_call"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:tint="#00B341" />
+</LinearLayout>
